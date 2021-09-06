@@ -7,6 +7,7 @@ const rowdy = require('rowdy-logger') //helps us visually see our routes
 //DB and Models
 const cityController = require('./controllers/cityController.js')
 const postController = require('./controllers/postController.js')
+const commentController = require('./controllers/commentController.js')
 
 
 //Configuration
@@ -26,6 +27,8 @@ app.use(express.json())
 app.use('/api/city', cityController)
 //creates the same base layer url for the city so we can pass the id of it easily
 app.use('/api/city', postController)
+//mimics the above
+app.use('/api/city', commentController)
 
 
 app.listen(port, () => {

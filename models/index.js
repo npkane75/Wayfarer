@@ -21,5 +21,6 @@ mongoose.connect(connectionString, configOptions)
 //exports the below as the collections to the controller
 module.exports = {
   City: require('./City.js'),
-  Post: require('./Post.js')
+  Post: require('./Post.js'),
+  Comment: require('./Comment.js')
 }

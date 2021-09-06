@@ -37,8 +37,8 @@ async function seedCities() {
     const valdivia = await City.findOne({name: 'Valdivia, Chile'})
     
     //variables that will be Post data
-    let post1 = new Post({title: "This one time in...", content: "I never finished the story"})
-    let post2 = new Post({title: "Seeding data for two models is hard...", content: "Never again"})
+    let post1 = new Post({title: "This one time in...", content: "I never finished the story", comments: "such a good story"})
+    let post2 = new Post({title: "Seeding data for two models is hard...", content: "Never again", comments: "sure you aren't"})
 
     //save() returns a promise --> bp for updating data in Mongoose --> comes with full validation and middleware
     await post1.save();
